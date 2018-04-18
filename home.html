@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <style>
+            
+        ul {
+            float: inherit;
+            border-radius: 5px;
+            border: hidden;
+            padding: 7px 11px;
+            /*background-color: rgb(255,255,255);*/
+        }
+
+        li {
+            float: left;
+            /*background-color: rgb(255,255,255);*/
+            padding: 5px 19px;
+            margin: 5px 2px 5px 0px;
+            color: black;
+            list-style: none;
+        }
+
+            /*li:hover img {
+                background-color: white;
+                color: white;
+            }*/
+
+
+            li:hover , li:hover a {     
+               /*background-color: rgb(0,128,192);*/ 
+                color: tomato;
+            }
+            
+            li a {
+                text-decoration: none;
+                color: black;
+                font-size: 21px;
+                font-style: normal;
+                font-family: 'RobotoDraft', 'Roboto', sans-serif;
+               
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="top_bar_menu" name="menu_bar">
+            <ul>
+                <li>
+                    <a href="home.html"><img src="logo_1.png"/></a>
+                </li>   
+                  
+                <li>
+                    <a href="page1.html">My Designs</a>
+                </li>
+
+                <li>
+                    <a href="">Our Interests</a>
+                </li>
+                <li>
+                    <a href="">Explore Us</a>
+                </li>
+
+                <li>
+                    <a href="">Login</a>
+                </li>
+                <li>
+                    <a href="">Contact Us</a>
+                </li>
+            </ul>  
+        </div>
+        <div id="image_slider">
+            <img class="mySlides" src="images/img1.jpg">
+            <img class="mySlides" src="images/img2.jpg">
+            <img class="mySlides" src="images/img3.jpg">
+            <img class="mySlides" src="images/img5.jpg">
+            <img class="mySlides" src="images/img7.jpg">
+        </div>
+         <div class="endDivClass" style="background:rgb(58,58,58); width:102.5%">
+            <a href="http://facebook.com"><img style="float:left" src="images/facebook.png" height="40" width="40" border="0" alt="follow us on facebook"></a> 
+            <a href="http://linkedin.com"><img style="float:left" src="images/linkedin.png" height="40" width="40" border="0" alt="follow us on linkedin"></a> 
+            <a href="http://twitter.com"><img style="float:left" src="images/twitter.png" height="40" width="40" border="0" alt="follow us on twitter"></a> 
+        </div>
+         <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+            setTimeout(carousel, 5000); 
+            }
+    </script>
+    </body>    
+</html>
